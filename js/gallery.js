@@ -82,7 +82,7 @@ function addImagesToUI(images) {
     .join("");
   gallery.insertAdjacentHTML("beforeend", contents);
 }
-function writeToConsole() {
+function initializeLightboxOnClick() {
   gallery.addEventListener("click", (event) => {
     if (event.target.nodeName !== "IMG") {
       return;
@@ -107,4 +107,5 @@ function writeToConsole() {
   });
 }
 addImagesToUI(images);
-writeToConsole();
+initializeLightboxOnClick();
+
